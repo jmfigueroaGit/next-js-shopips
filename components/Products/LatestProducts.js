@@ -11,24 +11,21 @@ export default function LatestProducts() {
 					brand="Apple"
 					name="iPhone 13"
 					price="$ 500.54"
-					height={255}
-					width={216}
+					size="w-48 sm:w-56"
 				/>
 				<Product
 					url="/images/photo-2.png"
 					brand="Apple"
 					name="iPhone XR"
 					price="$ 500.54"
-					height={255}
-					width={216}
+					size="w-48 sm:w-56"
 				/>{' '}
 				<Product
 					url="/images/photo-3.png"
 					brand="Apple Headphone"
 					name="iPhone 13"
 					price="$ 500.54"
-					height={250}
-					width={250}
+					size="w-48 sm:w-56"
 				/>
 			</div>
 		</div>

@@ -1,4 +1,6 @@
 import Banner from './layout/Banner';
+import LowerBanner from './layout/BannerItems/LowerBanner';
+import FeaturedProducts from './Products/FeaturedProducts';
 import LatestProducts from './Products/LatestProducts';
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
 		<div>
 			<Banner />
 			<LatestProducts />
+			<LowerBanner />
+			<FeaturedProducts />
 		</div>
 	);
 }
