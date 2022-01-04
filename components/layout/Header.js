@@ -5,21 +5,20 @@ import HeaderMobile from './HeaderItems/HeaderMobile';
 
 export default function Header() {
 	return (
-		// <!-- This example requires Tailwind CSS v2.0+ -->
-		<nav className="bg-gray-100">
-			<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-				<div className="relative flex items-center justify-between h-16">
-					<div className="flex-1 flex items-center justify-center">
-						<div className="flex-shrink-0 flex items-center">
-							<h1 className="font-bold text-2xl">
+		<header className="top-0 bg-gray-100">
+			<div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+				<div className="relative flex items-center justify-center h-16">
+					<div className="flex items-center justify-center flex-1">
+						<div className="flex items-center flex-shrink-0">
+							<h1 className="text-2xl font-bold">
 								<span className="text-gray-600">SHO</span>
 								<span className="text-yellow-400">PIPS</span>
 							</h1>
 						</div>
 						<SearchBar />
 					</div>
-					<div className="sm:block visibility: hidden">
-						<div className="pt-2 pb-3 flex mt-5">
+					<div className="hidden sm:block visibility:">
+						<div className="flex pt-2 pb-3 mt-5">
 							<HeaderItem title="Profile" Icon={UserIcon} />
 							<HeaderItem title="Favorites" Icon={HeartIcon} />{' '}
 							<HeaderItem title="Cart" Icon={ShoppingCartIcon} />
@@ -35,6 +34,6 @@ export default function Header() {
 					</div>
 				</div>
 			</div>
-		</nav>
+		</header>
 	);
 }
