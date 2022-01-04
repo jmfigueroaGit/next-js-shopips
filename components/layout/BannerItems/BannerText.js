@@ -1,19 +1,21 @@
-export default function BannerText({ title, location }) {
+export default function BannerText({ title, category, brand }) {
 	return (
 		<div className="flex flex-col items-center justify-center text-white ">
-			<p className="text-3xl font-bold">{title}</p>
-			<p className="flex mb-10 text-xl font-semibold leading-none">
-				{location ? (
+			<h1 className="text-3xl font-bold">{title}</h1>
+			<h3 className="flex mt-2 mb-10 text-xl font-semibold leading-none tracking-widest opacity-75">
+				{category && brand ? (
 					<>
 						{' '}
 						Home
 						{' > '}
-						<span className="text-red-600 ">{location}</span>
+						<div className="hover:underline">{category}</div>
+						{' > '}
+						<span className="text-red-600 hover:underline">{brand}</span>
 					</>
 				) : (
 					<span className="text-red-600 ">Home</span>
 				)}
-			</p>
+			</h3>
 		</div>
 	);
 }

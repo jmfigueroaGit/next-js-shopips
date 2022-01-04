@@ -10,7 +10,7 @@ export default function Header() {
 				<div className="relative flex items-center justify-center h-16">
 					<div className="flex items-center justify-center flex-1">
 						<div className="flex items-center flex-shrink-0">
-							<h1 className="text-2xl font-bold">
+							<h1 className="text-2xl font-bold tracking-widest">
 								<span className="text-gray-600">SHO</span>
 								<span className="text-yellow-400">PIPS</span>
 							</h1>

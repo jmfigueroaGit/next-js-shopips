@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Product({ url, brand, name, price, size }) {
 	return (
 		<div className="flex flex-row items-center justify-around py-2 my-5 cursor-pointer sm:flex-col">
@@ -14,7 +12,7 @@ export default function Product({ url, brand, name, price, size }) {
 			<div className="bottom-0 left-0 right-0 flex flex-col items-center justify-center mt-2 ">
 				<h3 className="text-xs font-bold text-gray-500">{brand}</h3>
 				<h1 className="text-xl font-bold text-blue-700">{name}</h1>
-				<p className="text-sm font-bold text-red-700">{price}</p>
+				<h5 className="text-sm font-bold text-red-700">{price}</h5>
 			</div>
 		</div>
 	);

@@ -6,7 +6,7 @@ import LatestProducts from './Products/LatestProducts';
 export default function Home() {
 	return (
 		<div>
-			<Banner />
+			<Banner title="Multimedia Products" />
 			<LatestProducts />
 			<LowerBanner />
 			<FeaturedProducts />
