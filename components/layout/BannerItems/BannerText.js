@@ -1,14 +1,12 @@
 export default function BannerText({ title, category, brand }) {
 	return (
 		<div className="flex flex-col items-center justify-center text-white ">
-			<h1 className="text-3xl font-bold">{title}</h1>
-			<h3 className="flex mt-2 mb-10 text-xl font-semibold leading-none tracking-widest opacity-75">
+			<h1 className="text-xl font-bold sm:text-3xl">{title}</h1>
+			<h3 className="flex mt-2 mb-10 text-sm font-semibold leading-none opacity-75 sm:text-xl">
 				{category && brand ? (
 					<>
-						{' '}
-						Home
-						{' > '}
-						<div className="hover:underline">{category}</div>
+						Home{' > '}
+						<span className="hover:underline">{category}</span>
 						{' > '}
 						<span className="text-red-600 hover:underline">{brand}</span>
 					</>
