@@ -1,34 +1,38 @@
 import { HeartIcon } from '@heroicons/react/outline';
 
-export default function ProductDetails() {
+export default function ProductDetails({ product }) {
 	return (
-		<div>
+		<div className="pt-10 sm:pt-3">
 			<div className="flex flex-col sm:flex-row sm:justify-evenly">
 				<div className="flex items-center justify-center">
-					<img
-						src={'/images/photo-1.png'}
-						alt="photo.png"
-						className={`w-56 sm:w-96`}
-					/>
+					{product &&
+						product.images?.map((image) => (
+							<img
+								key={image._id}
+								src={image.url}
+								alt="name"
+								className={`w-56 sm:w-90`}
+							/>
+						))}
 				</div>
-				<div className="flex flex-col mx-2 mb-3 text-gray-900 sm:w-6/12 sm:mt-10">
-					<h1 className="text-xl font-bold">MacBook Air (M1, 2020)</h1>
-					<h3 className="font-bold text-red-700">$ 1000.00 - $ 4000.00</h3>
+				<div className="flex flex-col mx-2 mt-3 mb-3 text-gray-900 sm:w-6/12 sm:mt-10">
+					<h1 className="text-xl font-bold">{product.name}</h1>
+					<h3 className="font-bold text-red-700">$ {product.price}.00</h3>
 					<h4 className="font-bold ">
 						Available:{' '}
-						<span className="font-medium text-red-700">In Stock</span>
+						<span className="font-medium text-red-700">
+							{product.countInStock > 0 ? `Available` : `Out Of Stock`}
+						</span>
 					</h4>
 					<p className="mt-2 font-serif text-justify indent-5">
-						Our thinnest, lightest notebook, completely transformed by the Apple
-						M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster.
-						Our most advanced Neural Engine for up to 9x faster machine
-						learning.
+						{product.description}
 					</p>
 					<br />
 					<div className="flex items-center float-left mb-3 mr-5 sm:my-5">
 						<button
 							type="submit"
 							className="inline-flex justify-center px-10 py-2 text-sm font-medium text-white bg-red-600 border border-transparent shadow-sm rounded-3xl hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+							disabled={product.countInStock === 0}
 						>
 							Add to Cart
 						</button>
@@ -37,14 +41,13 @@ export default function ProductDetails() {
 					<hr />
 					<div className="grid grid-cols-1 mt-2 text-gray-900 lg:grid-cols-2">
 						<h1 className="font-bold">
-							Product Id: <span className="font-light">123-123-312-31</span>
+							Product Id: <span className="font-light">{product._id}</span>
 						</h1>
 						<h1 className="font-bold">
-							Tags:{' '}
-							<span className="font-light">Phone Electronic Technology</span>
+							Brand: <span className="font-light">{product.brand}</span>
 						</h1>
 						<h1 className="font-bold">
-							Categories: <span className="font-light">Phones Smartphones</span>
+							Categories: <span className="font-light">{product.category}</span>
 						</h1>
 					</div>
 				</div>

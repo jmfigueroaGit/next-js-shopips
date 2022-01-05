@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Footer from './Footer';
 import Header from './Header';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Layout({ children, title }) {
 	return (
 		<div>
@@ -11,6 +14,7 @@ export default function Layout({ children, title }) {
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
 			<Header />
+			<ToastContainer position="bottom-right" />
 			{children}
 
 			<Footer />

@@ -1,0 +1,147 @@
+[
+    {
+        "name": "iPhone 13",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-1.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "smartphones",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": true
+    },
+    {
+        "name": "iPhone Xr",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-2.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "smartphones",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": true
+    },
+    {
+        "name": "Apple Headphone",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-3.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "electronics",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": true
+    },
+    {
+        "name": "Macbook Pro",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-4.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "laptops",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": false
+    },
+    {
+        "name": "iMac 2022",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-5.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "desktop",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": false
+    },
+    {
+        "name": "iPad Air",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-6.png"
+            }
+        ],
+        "brand": "apple",
+        "category": "tablet",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": false
+    },
+    {
+        "name": "Samsung Galaxy Note",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-7.png"
+            }
+        ],
+        "brand": "samsung",
+        "category": "smartphones",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": false
+    },
+    {
+        "name": "Acer Predator Helios",
+        "images":[
+            {
+                "public_id": "product/1",
+                "url": "/images/photo-8.png"
+            }
+        ],
+        "brand": "acer",
+        "category": "laptops",
+        "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.",
+        "specs": "M1 has the fastest CPU we’ve ever made. With that kind of processing speed, MacBook Air can take on new extraordinarily intensive tasks like professional-quality editing and action-packed gaming. But the 8‑core CPU on M1 isn‘t just up to 3.5x faster than the previous generation2 — it balances high-performance cores with efficiency cores that can still crush everyday jobs while using just a tenth of the power.",
+        "rating": 4,
+        "numOfReviews":10,
+        "price": 500,
+        "countInStock": 53,
+        "isFeatured": false
+    }
+
+]
