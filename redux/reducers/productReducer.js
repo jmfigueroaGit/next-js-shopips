@@ -6,7 +6,7 @@ import {
 	SINGLE_PRODUCT_SUCCESS,
 	SINGLE_PRODUCT_FAILED,
 	CLEAR_ERROR,
-} from '../constants/productConstant';
+} from '@/constants/productConstant';
 
 export const getProductsReducer = (state = { products: [] }, action) => {
 	switch (action.type) {

@@ -6,14 +6,16 @@ import {
 	SINGLE_PRODUCT_SUCCESS,
 	SINGLE_PRODUCT_FAILED,
 	CLEAR_ERROR,
-} from '../constants/productConstant';
+} from '@/constants/productConstant';
 import axios from 'axios';
+import absoluteUrl from 'next-absolute-url';
 
-export const getProducts = () => async (dispatch) => {
+export const getProducts = (req) => async (dispatch) => {
 	try {
 		dispatch({ type: ALL_PRODUCT_REQUEST });
+		const { origin } = absoluteUrl(req);
 
-		const { data } = await axios.get(`http://localhost:3000/api/products`);
+		const { data } = await axios.get(`${origin}/api/products`);
 
 		dispatch({
 			type: ALL_PRODUCT_SUCCESS,
@@ -30,13 +32,11 @@ export const getProducts = () => async (dispatch) => {
 	}
 };
 
-export const getProduct = (id) => async (dispatch) => {
+export const getProduct = (req, id) => async (dispatch) => {
 	try {
 		dispatch({ type: SINGLE_PRODUCT_REQUEST });
-
-		const { data } = await axios.get(
-			`http://localhost:3000/api/products/${id}`
-		);
+		const { origin } = absoluteUrl(req);
+		const { data } = await axios.get(`${origin}/api/products/${id}`);
 
 		dispatch({
 			type: SINGLE_PRODUCT_SUCCESS,

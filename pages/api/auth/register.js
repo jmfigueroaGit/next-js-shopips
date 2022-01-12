@@ -1,14 +1,13 @@
 import nc from 'next-connect';
 import dbConnect from '@/config/dbConnect';
 
-import { getProducts } from '@/controllers/productController';
-import { isAuthenticatedUser } from '@/middleware/auth';
+import { registerUser } from '@/controllers/authController';
 import onError from '@/middleware/errors';
 
 const handler = nc({
 	onError,
 });
 dbConnect();
-handler.get(getProducts);
+handler.post(registerUser);
 
 export default handler;

@@ -1,8 +1,9 @@
-import Layout from '../components/layout/Layout';
-import Home from '../components/Home';
+import Layout from '@/components/layout/Layout';
+import Home from '@/components/Home';
 
-import { getProducts } from '../redux/actions/productAction';
-import { wrapper } from '../redux/store';
+import { getProducts } from '@/actions/productAction';
+import { wrapper } from '@/redux/store';
+import { loadUser } from '@/actions/userAction';
 
 export default function Index() {
 	return (
@@ -14,6 +15,7 @@ export default function Index() {
 
 export const getServerSideProps = wrapper.getServerSideProps(
 	async ({ req, query, store }) => {
-		await store.dispatch(getProducts());
+		await store.dispatch(getProducts(req));
+		await store.dispatch(loadUser(req));
 	}
 );

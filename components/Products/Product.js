@@ -13,9 +13,15 @@ export default function Product({ product, size }) {
 				</div>
 				<br />
 				<div className="bottom-0 left-0 right-0 flex flex-col items-center justify-center mt-2 ">
-					<h3 className="text-xs font-bold text-gray-500">{product.brand}</h3>
-					<h1 className="text-xl font-bold text-blue-700">{product.name}</h1>
-					<h5 className="text-sm font-bold text-red-700">{product.price}</h5>
+					<h3 className="text-xs font-bold text-gray-500 capitalize">
+						{product.brand}
+					</h3>
+					<h1 className="text-sm font-bold text-blue-700 sm:text-md">
+						{product.name}
+					</h1>
+					<h5 className="text-xs font-bold text-red-700 sm:text-sm">
+						$ {product.price}
+					</h5>
 				</div>
 			</div>
 		</Link>

@@ -16,7 +16,6 @@ import { toast } from 'react-toastify';
 export default function ProductScreen() {
 	const dispatch = useDispatch();
 	const router = useRouter();
-
 	const { products } = useSelector((state) => state.getProducts);
 	const { product, error, loading } = useSelector((state) => state.getProduct);
 

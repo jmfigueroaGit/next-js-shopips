@@ -1,8 +1,9 @@
-import Layout from '../../components/layout/Layout';
-import ProductScreen from '../../components/Screens/ProductScreen';
+import Layout from '@/components/layout/Layout';
+import ProductScreen from '@/components/Screens/ProductScreen';
 
-import { getProduct } from '../../redux/actions/productAction';
-import { wrapper } from '../../redux/store';
+import { getProduct } from '@/actions/productAction';
+import { wrapper } from '@/redux/store';
+
 export default function BookingDetailsPage() {
 	return (
 		<Layout>
@@ -13,6 +14,6 @@ export default function BookingDetailsPage() {
 
 export const getServerSideProps = wrapper.getServerSideProps(
 	async ({ req, params, store }) => {
-		await store.dispatch(getProduct(params.id));
+		await store.dispatch(getProduct(req, params.id));
 	}
 );

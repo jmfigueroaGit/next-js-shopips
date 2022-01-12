@@ -1,4 +1,4 @@
-import Product from '../models/product';
+import Product from '@/models/product';
 import asyncHandler from 'express-async-handler';
 
 // @desc    Fetch all products
@@ -8,7 +8,7 @@ const getProducts = asyncHandler(async (req, res) => {
 	const products = await Product.find();
 	const count = await Product.countDocuments();
 
-	res.json({
+	res.status(200).json({
 		total: count,
 		products,
 	});
