@@ -1,14 +1,27 @@
 import React, { useEffect } from 'react';
-import { ShoppingCartIcon, UserIcon, HeartIcon } from '@heroicons/react/solid';
+import { ShoppingCartIcon, HeartIcon } from '@heroicons/react/solid';
+import { useRouter } from 'next/router';
 import SearchBar from './HeaderItems/SearchBar';
 import HeaderItem from './HeaderItems/HeaderItem';
 import HeaderMobile from './HeaderItems/HeaderMobile';
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadUser } from '@/actions/userAction';
+import { signOut } from 'next-auth/client';
 
-export default function Header() {
+export default function Header({ history }) {
 	const dispatch = useDispatch();
+	const router = useRouter();
+	const { loading, isAuthenticated, user } = useSelector(
+		(state) => state.loadUser
+	);
+	useEffect(() => {
+		if (!user) dispatch(loadUser());
+	}, [dispatch, user]);
+
+	const logoutHandler = () => {
+		signOut();
+	};
 
 	return (
 		<header className="top-0 bg-gray-100">
@@ -24,15 +37,15 @@ export default function Header() {
 							</div>
 							<SearchBar />
 						</div>
-					</Link>{' '}
-					<Link href="/login">
-						<a className="font-bold">Login</a>
 					</Link>
-					{/* {user && user.name ? (
+					{user ? (
 						<div className="hidden sm:block ">
-							<div className="flex pt-2 pb-3 mt-5">
-								{user && user.avatar && (
-									<div className="flex flex-col items-center group">
+							{user && user.avatar && (
+								<div className="flex pt-2 pb-3 mt-5">
+									<HeaderItem title="Favorites" Icon={HeartIcon} />
+									<HeaderItem title="Cart" Icon={ShoppingCartIcon} />
+
+									<div className="flex flex-col items-center ml-7 group">
 										<img
 											src={user.avatar.url}
 											className="rounded-full h-7 w-7"
@@ -42,22 +55,22 @@ export default function Header() {
 											{name[0]}
 										</h5>
 									</div>
-								)}
-
-								<HeaderItem title="Favorites" Icon={HeartIcon} />
-								<HeaderItem title="Cart" Icon={ShoppingCartIcon} />
-							</div>
+								</div>
+							)}
 						</div>
 					) : (
-						<Link href="/login">
-							<a className="font-bold">Login</a>
-						</Link>
-					)} */}
+						!loading &&
+						!isAuthenticated && (
+							<Link href="/login">
+								<a className="font-bold">Login</a>
+							</Link>
+						)
+					)}
 				</div>
 
 				<div className="sm:hidden" id="mobile-menu">
 					<div className="px-2 pt-2 pb-3 space-y-1">
-						{/* {user && user.avatar && (
+						{user && user.avatar && (
 							<div className="flex flex-row justify-between mx-1 my-2 ">
 								<img
 									src={user.avatar.url}
@@ -69,7 +82,7 @@ export default function Header() {
 								</h1>
 								<div></div>
 							</div>
-						)} */}
+						)}
 
 						<HeaderMobile title="Favorites" Icon={HeartIcon} />
 						<HeaderMobile title="Cart" Icon={ShoppingCartIcon} />

@@ -2,7 +2,7 @@ import nc from 'next-connect';
 import dbConnect from '@/config/dbConnect';
 
 import { loadUserProfile } from '@/controllers/authController';
-import { protect } from '@/middleware/auth';
+import { isAuthenticatedUser } from '@/middleware/auth';
 
 import onError from '@/middleware/errors';
 
@@ -12,6 +12,6 @@ const handler = nc({
 
 dbConnect();
 
-handler.use(protect).get(loadUserProfile);
+handler.use(isAuthenticatedUser).get(loadUserProfile);
 
 export default handler;

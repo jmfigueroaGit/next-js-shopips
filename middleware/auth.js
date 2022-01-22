@@ -1,6 +1,7 @@
 import asyncHandler from 'express-async-handler';
 import jwt from 'jsonwebtoken';
 import User from '@/models/user';
+import { getSession } from 'next-auth/client';
 // Handling user roles
 const protect = asyncHandler(async (req, res, next) => {
 	let token;
@@ -30,6 +31,18 @@ const protect = asyncHandler(async (req, res, next) => {
 	}
 });
 
+const isAuthenticatedUser = asyncHandler(async (req, res, next) => {
+	const session = await getSession({ req });
+
+	if (!session) {
+		res.status(401);
+		throw new Error('Login first to access this resource');
+	}
+
+	req.user = session.user;
+	next();
+});
+
 const admin = (req, res, next) => {
 	if (req.user && req.user.isAdmin) {
 		next();
@@ -39,4 +52,4 @@ const admin = (req, res, next) => {
 	}
 };
 
-export { protect, admin };
+export { protect, admin, isAuthenticatedUser };

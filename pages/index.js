@@ -16,6 +16,5 @@ export default function Index() {
 export const getServerSideProps = wrapper.getServerSideProps(
 	async ({ req, query, store }) => {
 		await store.dispatch(getProducts(req));
-		await store.dispatch(loadUser(req));
 	}
 );
